@@ -1,9 +1,16 @@
-# FOMC Stock Market Volatility Analysis
+# FOMC Policy Intelligence: Fed Communications vs Market Volatility
 
-This repository is a completed, reproducible observational research system for
-Federal Reserve policy communication and cross-market reactions. It combines validated
-document processing, expert-supervised policy-stance measurement, conservative event
-alignment, robust explanatory statistics, and a cached-output Streamlit explorer.
+An end-to-end NLP and statistics pipeline that turns 295 Federal Reserve (FOMC) statements into structured policy signals and tests whether they explain market reactions in the VIX, S&P 500 and Treasury yields.
+
+**Stack:** Python · PyTorch · Hugging Face Transformers (RoBERTa, FinBERT) · Gemini API · statsmodels · Streamlit · pytest
+
+## At a glance
+
+- **Fine-tuned stance classifier:** RoBERTa-base trained on an expert-labelled FOMC dataset reaches **0.639 macro-F1** on the untouched external test set, up from **0.299** for a rule-based baseline.
+- **LLM evaluated, not just used:** in a bounded test, Gemini structured extraction was benchmarked against the local classifier. Because of its grounding and abstention behavior, it stays an experimental enrichment layer rather than the primary measure.
+- **Rigorous event study:** 242 statement events, robust inference (HC3/HAC), Holm multiple-testing correction and crisis-period sensitivity checks.
+- **Honest result:** after adjusting for market conditions and multiple testing, no language signal reliably explains market moves. One nominal VIX association (dovish tone → higher VIX) does not survive correction.
+- **Production habits:** packaged `src/` layout, config-driven pipeline, cached outputs, 80 automated tests and a Streamlit research explorer.
 
 ## Problem statements
 
