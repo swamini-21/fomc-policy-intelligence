@@ -12,6 +12,8 @@ An end-to-end NLP and statistics pipeline that turns 295 Federal Reserve (FOMC) 
 - **Honest result:** after adjusting for market conditions and multiple testing, no language signal reliably explains market moves. One nominal VIX association (dovish tone → higher VIX) does not survive correction.
 - **Production habits:** packaged `src/` layout, config-driven pipeline, cached outputs, 80 automated tests and a Streamlit research explorer.
 
+![Streamlit research explorer](docs/streamlit_explorer.png)
+
 ## Problem statements
 
 1. **Reliable policy-signal extraction:** How can we build a reproducible NLP pipeline that preserves distinct Federal Reserve documents and reliably extracts sentiment, emotion, policy stance, and topics from long-form communications?
