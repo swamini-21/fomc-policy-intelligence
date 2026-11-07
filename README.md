@@ -12,7 +12,7 @@ An end-to-end NLP and statistics pipeline that turns 295 Federal Reserve (FOMC) 
 - **Honest result:** after adjusting for market conditions and multiple testing, no language signal reliably explains market moves. One nominal VIX association (dovish tone → higher VIX) does not survive correction.
 - **Production habits:** packaged `src/` layout, config-driven pipeline, cached outputs, 80 automated tests and a Streamlit research explorer.
 
-![Streamlit research explorer](Streamlit_app.png)
+![Streamlit research explorer](docs/streamlit_explorer.png)
 
 ## Problem statements
 
